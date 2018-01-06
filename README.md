@@ -22,8 +22,8 @@
     
     
     
-    
-    
+TO DO:
+Add screenshots (gifs too?) to show off the sweet setup
 
 
 
