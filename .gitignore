@@ -1,2 +1,5 @@
+.config.swp
 repos
 transset
+polybar/build
+polybar/config.bak
