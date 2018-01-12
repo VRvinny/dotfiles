@@ -58,6 +58,11 @@ set $altmod Mod1
 gaps inner 5
 gaps outer 5
 
+#set wallpaper
+# wall.jpg more 80s
+# wall2.jpeg in 4k
+#exec --no-startup-id feh --bg-fill $HOME/.i3/lock/wall.jpg
+exec --no-startup-id feh --bg-fill $HOME/.i3/lock/wall2.jpeg
 
 # doesnt clip the background at the top in i3 gaps
 for_window [class="^.*"] border pixel 0
@@ -94,24 +99,30 @@ bindsym   $mod + Shift + o		          resize grow width 10 px or 10 ppt
 
 # change gaps size
 bindsym   $mod + x			                gaps inner current plus 5
-bindsym   $mod + Shift + x		          gaps inner current minus 5
+bindsym   $mod + Shift + x		          gaps inner current minus 5; gaps outer current set 5
 bindsym   $mod + z                      gaps inner current set 60
-bindsym   $mod + Shift + z              gaps inner current set 0
+bindsym   $mod + Shift + z              gaps inner current set 0; gaps outer current set 0
 
 # screenshots
-bindsym   Print                          exec scrot -e 'mv $f ~/Pictures/screenshots'                         # normal       screenshot
-bindsym   $mod + Print                   exec scrot -bu -e 'mv $f ~/Pictures/screenshots'                     # window only  screenshot
+bindsym   Print                         exec scrot -e 'mv $f ~/Pictures/screenshots'                         # normal       screenshot
+bindsym   $mod + Print                  exec scrot -bu -e 'mv $f ~/Pictures/screenshots'                     # window only  screenshot
 
 
 #shortcuts
 bindsym   $mod + m                      exec firefox &
 bindsym   $mod + Shift + m              exec firefox -private &
 
-bindsym    $mod + comma                  exec chromium-browser
-bindsym   $mod + Shift + comma            exec chromium-browser --incognito &
+bindsym   $mod + comma                  exec chromium-browser
+bindsym   $mod + Shift + comma          exec chromium-browser --incognito &
+
+#flash window
+bindsym   $mod + grave                      exec $HOME/.i3/flashwin.sh
 
 #enable compton
-#exec /usr/bin/compton --config /home/vinesh/.i3/.compton.conf -b
+exec /usr/bin/compton --config /home/vinesh/.i3/.compton.conf -b
+
+
+
 #~/.i3/config
 #exec --no-startup-id compton
 
