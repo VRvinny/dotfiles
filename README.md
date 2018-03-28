@@ -24,7 +24,9 @@
     
 TO DO:
 Add screenshots (gifs too?) to show off the sweet setup
-
+[Here's an example of work.](screens/java.png)
+[Did I tell you I can compile LaTeX documents in real time? Courtesy of Vim and Vim-live-latex-preview](screens/vim.png)
+[Lock screen - works by screenshotting the current workspace, pixelating everything and overlaying the lock screen image on top](screens/lock.png)
 
 
 
